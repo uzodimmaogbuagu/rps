@@ -28,7 +28,8 @@ while pin_state == 0 and attempts < 3:
         else:
             # PIN is valid and correct
             pin_state = pin_choice
-            
+
+# This is a value error            
     except ValueError:
         # This runs if the user types letters instead of numbers
         print("Invalid input. Please enter numbers only.")
