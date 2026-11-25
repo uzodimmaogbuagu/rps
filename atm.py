@@ -1,6 +1,6 @@
 # Set the actual correct PIN for the account
 CORRECT_PIN = 12345
-
+# This is a comment
 # Initialise the pin_state variable to 0
 pin_state = 0
 
