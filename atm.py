@@ -78,17 +78,6 @@ else:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 # # Initialise the pin_state variable to 0
 # pin_state = 0
 
