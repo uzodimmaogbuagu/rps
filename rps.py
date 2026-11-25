@@ -1,24 +1,26 @@
-# import sys
-# import random
-# playerchoice = input("Enter \n \n1 for Rock\n2 for paper\n3 for scissors\n")
-# player = int(playerchoice)
-# print(f"you choose: {player}")
+import sys
+print("welcome to Rock Papper Scissors")
 
-# if player < 1 or player > 3:
-#     sys.exit("Invalid choice, you must choose option between 1 and 3")
+import random
+playerchoice = input("Enter \n \n1 for Rock\n2 for paper\n3 for scissors\n")
+player = int(playerchoice)
+print(f"you choose: {player}")
+
+if player < 1 or player > 3:
+    sys.exit("Invalid choice, you must choose option between 1 and 3")
     
 
-# options = [1, 2, 3]
+options = [1, 2, 3]
 
-# computerchoice = random.choice(options)
-# print(f"computer choose {computerchoice}")
+computerchoice = random.choice(options)
+print(f"computer choose {computerchoice}")
 
-# if player == 1 and computerchoice == 3:
-#     print("you win")
-# elif player == computerchoice:
-#     print("Its a draw")
-# else:
-#     print("computer wins")    
+if player == 1 and computerchoice == 3:
+    print("you win")
+elif player == computerchoice:
+    print("Its a draw")
+else:
+    print("computer wins")    
 
 
 
