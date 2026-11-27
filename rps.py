@@ -1,5 +1,5 @@
 import random
-
+#Welcome banner
 print("Welcome to RPS Championship")
 
 player_score = 0
