@@ -1,69 +1,57 @@
-import sys
-print("welcome to Rock Papper Scissors")
-
 import random
-playerchoice = input("Enter \n \n1 for Rock\n2 for paper\n3 for scissors\n")
-player = int(playerchoice)
-print(f"you choose: {player}")
 
-if player < 1 or player > 3:
-    sys.exit("Invalid choice, you must choose option between 1 and 3")
-    
+print("Welcome to RPS Championship")
 
-options = [1, 2, 3]
+player_score = 0
+computer_score = 0
 
-computerchoice = random.choice(options)
-print(f"computer choose {computerchoice}")
+while True:
+    user_option = input(
+        "Choose your option between \n"
+        "1. Rock\n"
+        "2. Paper\n"
+        "3. Scissors\n"
+    )
 
-if player == 1 and computerchoice == 3:
-    print("you win")
-elif player == computerchoice:
-    print("Its a draw")
+    user_input = int(user_option)
+
+    if user_input >= 1 and user_input <= 3:
+        break
+
+    print("Invalid! Choose between 1 and 3")
+
+
+choices_list = ["Rock", "Paper", "Scissors"]
+
+computer_choice = random.choice(choices_list)
+user_choice = choices_list[user_input - 1]
+
+print(f"You chose {user_choice}")
+print(f"Computer chose {computer_choice}")
+
+
+# Determine the winner
+
+if user_choice == computer_choice:
+    print("It's a draw!")
+
+elif (
+    (user_choice == "Rock" and computer_choice == "Scissors")
+    or
+    (user_choice == "Paper" and computer_choice == "Rock")
+    or
+    (user_choice == "Scissors" and computer_choice == "Paper")
+):
+    print("You win!")
+    player_score += 1
+
 else:
-    print("computer wins")    
+    print("Computer wins!")
+    computer_score += 1
+
+# Display the scores
+
+print("Player score:", player_score)
+print("Computer score:", computer_score)
 
 
-
-   
-# import phonenumbers
-# from phonumbers import geocoder 
-# import time, random
-
-# def start_phone_tracker(target):
-#     print(f"[+] phoneTracer v2.1 . OSINT")
-#     print(f"[*] Target: {target}!")
-#     print(f"[*] Initilaizing trace...")
-#     p = phonenumbers.parse(target. None)
-#     r = geocoder.description_fo_number(p)
-#     print(f"[+] Location; {r}")
-#     print(f"[+] TRace commplete")
-    
-# start_phone_tracker("+234-813-135-5-757")
-
-    
-    
-# import turtle
-# import math
-
-# t = turtle. Turtle()
-# t.speed(0)
-# t.color("red")
-# turtle.bgcolor("black")
-
-# def corazon(n):
-#     x = 16 * math.sin(n) ** 3
-#     y = 13 * math.cos(n) - 5 * math.cos(
-#         2*n) - 2*math.cos(3*n) - math.cos(4*n)
-#     return x, y
-
-# t.penup()
-# for i in range(15):
-#     t.goto(0, 0)
-#     t.pendown()
-#     for n in range(0, 100, 2):
-#         x, y = corazon(n/10)
-#         t.goto(x=1, y =1)
-#     t.penup()
-    
-# t.hideturtle()
-# turtle.done()
